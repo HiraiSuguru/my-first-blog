@@ -1,0 +1,3 @@
+1.Dockerアプリケーションを起動
+2.DockerのDjangogirls用イメージないにアクセス
+docker exec -it Django-girls /bin/bash

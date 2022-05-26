@@ -1,0 +1,26 @@
+version: '3'
+  
+networks:
+  sky_portal_nw:
+    name: sky_portal_nw
+    driver: bridge
+    ipam:
+     driver: default
+     config:
+       - subnet: 192.168.1.0/24
+  
+services:
+  girls:
+    depends_on:
+      - db
+    image: django/girls:0.0.1
+    container_name: Django-girls
+    networks:
+      sky_portal_nw:
+        ipv4_address: 192.168.1.101
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    restart: always
+    tty: true
