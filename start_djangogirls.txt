@@ -1,3 +1,24 @@
 1.Dockerアプリケーションを起動
-2.DockerのDjangogirls用イメージないにアクセス
+2.DockerのDjangogirls用イメージ内にアクセス
 docker exec -it Django-girls /bin/bash
+
+## Djangogirls実施中に発生した問題 ##
+・runserver
+ポートを指定しないと起動しない
+python3 manage.py runserver 0:8000
+
+・pushできない問題
+GitHubの２段階認証を設定すれば解決
+　- GitHubが単純にパスワードだけでのアクセスを断るようになった?
+　- 前から認証鍵での通信を推奨していたので、その関係か?
+認証方法は多分どれでもいい
+
+・Pythonanywhereでページの公開ができない
+mysites/settings.txtのALLOW HOSTSにサイトURLを書き込む
+　-> これでできるはずがうまくいかない
+　ワイルドカード('*')を設定してやると通る
+　 -> そりゃそう
+　　　セキュリティ的に問題ありなので、余裕があれば、指定のホストのみの設定に変える
+      -> 公開したいページのURLに間違いは無いはずなので、それ以外にオープンにしておくべきところがある?
+
+

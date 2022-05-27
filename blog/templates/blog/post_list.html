@@ -6,83 +6,19 @@
     <div>
       <h1><a herf="/">Django Girls Blog</a></h1>
     </div>
-
+    
+    {% for post in posts %}
     <div>
-      <p>published: 14.06.2014, 12:24</p>
-      <h2><a herf="">My first post</a></h2>
-      <p>Aenean eu leo quam. </p>
+      <p>published: {{ post.published_date }}</p>
+      <h2><a herf="">{{ post.title }}</a></h2>
+      <p>{{ post.text|linebreaksbr }}</p>
     </div>
+    {% endfor %}
 
     <div>
       <p>published: 2014/06/14, 12:24</p>
       <h2><a herf="">My second post</a></h2>
       <p>Hello! How are you?</p>
-    </div>
-  </body>
-</html>
-<html>
-  <head>
-    <title>Django Girls blog</title>
-  </head>
-  <body>
-    <div>
-      <h1><a herf="/">Django Girls Blog</a></h1>
-    </div>
-
-    <div>
-      <p>published: 14.06.2014, 12:24</p>
-      <h2><a herf="">My first post</a></h2>
-      <p>Aenean eu leo quam. </p>
-    </div>
-
-    <div>
-      <p>published: 2014/06/14, 12:24</p>
-      <h2><a herf="">My second post</a></h2>
-      <p>Hello! </p>
-    </div>
-  </body>
-</html>
-<html>
-  <head>
-    <title>Django Girls blog</title>
-  </head>
-  <body>
-    <div>
-      <h1><a herf="/">Django Girls Blog</a></h1>
-    </div>
-
-    <div>
-      <p>published: 14.06.2014, 12:24</p>
-      <h2><a herf="">My first post</a></h2>
-      <p>Aenean eu leo quam. </p>
-    </div>
-
-    <div>
-      <p>published: 2014/06/14, 12:24</p>
-      <h2><a herf="">My second post</a></h2>
-      <p>Hello! </p>
-    </div>
-  </body>
-</html>
-<html>
-  <head>
-    <title>Django Girls blog</title>
-  </head>
-  <body>
-    <div>
-      <h1><a herf="/">Django Girls Blog</a></h1>
-    </div>
-
-    <div>
-      <p>published: 14.06.2014, 12:24</p>
-      <h2><a herf="">My first post</a></h2>
-      <p>Aenean eu leo quam. </p>
-    </div>
-
-    <div>
-      <p>published: 2014/06/14, 12:24</p>
-      <h2><a herf="">My second post</a></h2>
-      <p>Hello! </p>
     </div>
   </body>
 </html>
