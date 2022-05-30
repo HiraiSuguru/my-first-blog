@@ -27,8 +27,8 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'hiraisuguru.pythonamywhere.com']
 # ALLOWED_HOSTS = ['hiraisuguru.pythonamywhere.com']
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com']
 
 # Application definition
 
